@@ -22,44 +22,13 @@
 .nav-li-soc
 {
 	display: inline-block;
-	margin-right: 5px;
+	margin-right: 1em;
 }
 
 .navbar-a-soc
 {
 	font-family: 'BPG Banner QuadroSquare Caps';
 	color: #fff;
-}
-
-
-.fa-facebook-square:hover
-{
-	color: #6a89cc;
-}
-
-.fa-instagram:hover
-{
-	color: #e84393;
-}
-
-.fa-phone-square-alt:hover
-{
-	color: #78e08f;
-}
-
-.lang:hover
-{
-	color: #c0392b;
-}
-
-.fa-adjust:hover
-{
-	color: #f39c12;
-}
-
-.navbar-a-menu:hover
-{
-	color: #ff7979;
 }
 
 .main-header
