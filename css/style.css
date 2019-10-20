@@ -1,11 +1,17 @@
 body
 {
-	background-color: #2d3436;
+	background-color: #dcdde1;
+	overflow-x: hidden;
+	overflow-y: hidden;
 }
 
+.fixed
+{	
+	width: 100%;
+}
 
 .soc-header
-{
+{	
 	background-color: #353b48;
 	padding: 1% 5% 1% 5%;
 }
@@ -24,7 +30,7 @@ body
 
 .main-header
 {	
-	position: fixed;
+
 	width: 100%;
 	background-color: #2f3640;
 	padding: 1% 15% 1% 15%;
@@ -42,10 +48,10 @@ body
 {
 	display: inline-block;
 	vertical-align: middle;
-	margin:0 2em;
+	margin:0.5em 2em;
 }
 
-.navbar-a-menu
+.navbar-a-menu , p
 {
 	font-family: 'BPG Mrgvlovani Caps';
 	color: #fff;
@@ -59,3 +65,58 @@ body
 }
 
 
+
+
+.flex-container {
+ 	display: flex;
+ 	flex-wrap: wrap;
+  	justify-content: center;
+ 	background-color: #2f3640;
+ 	padding-bottom: 10%;
+}
+
+
+.flex-container > div {
+	border-radius: 10px;
+	border: 2px solid rgba(255, 255, 255, .7);
+ 	background-color: #353b48;
+ 	color: #353b48;
+ 	line-height: 200px;
+ 	margin: 0.1em;
+ 	text-align: center;
+ 	font-size: 30px;
+}
+
+.basic
+{
+	flex: 3;
+	color: #2f3640;
+}
+
+.medium
+{
+	flex: 3;
+	color: #2f3640;
+}
+
+.premium
+{
+	flex: 3;
+	color: #2f3640;
+}
+
+.plus
+{
+	flex: 3;
+	color: #2f3640;
+}
+
+.button {
+  background-color: #ecf0f1;
+  border: none;
+  color: #2c3e50;
+  padding: 15px 25px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
