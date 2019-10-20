@@ -7,10 +7,12 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/fonts.css">
 	<link rel="stylesheet" type="text/css" href="css/hover.css">
+	<link rel="stylesheet" type="text/css" href="css/preloader.css">
 	<link rel="icon" type="image/png" href="img/logo_2.png" />
 	<script src="https://kit.fontawesome.com/4f54d194e9.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body onload="myFunction()" style="margin:0;">
+	<div id="loader"></div>
  <div class="fixed">
  <!-- Top Soc Nav Header -->
 	<header class="soc-header">
@@ -45,7 +47,7 @@
 	</header>
 </div>
 <!-- Section -->
-
+<div style="display:none;" id="myDiv" class="animate-bottom">
  <div class="flex-container">
   <div class="basic grow">
   	 <a href="">
@@ -75,8 +77,18 @@
   	 	<button class="button">60 ₾</button>
   </a>
   </div>
+</div>
+<script>
+var myVar;
 
-</section>
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
 
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
 </body>
 </html>
