@@ -58,8 +58,28 @@
 	color: #f5f6fa;
 }
 
+.fa-cc-visa:hover
+{
+	color: #16a085;
+}
+
+.fa-cc-mastercard:hover
+{
+	color: #e67e22;
+}
+
+.fa-cc-paypal:hover
+{
+	color: #2980b9;
+}
+
+.fa-btc:hover
+{
+	color: #f39c12;
+}
+
 .grow { transition: all .5s ease-in-out; }
-.grow:hover { transform: scale(1.2); }
+.grow:hover { transform: scale(1.1); }
 
 
 .flex-container > div:hover

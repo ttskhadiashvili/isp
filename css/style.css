@@ -1,8 +1,7 @@
 body
 {
 	background-color: #2f3640;
-	overflow-x: hidden;
-	overflow-y: hidden;
+
 }
 
 .fixed
@@ -72,7 +71,7 @@ body
  	flex-wrap: wrap;
   	justify-content: center;
  	background-color: #2f3640;
- 	padding-bottom: 10%;
+ 	
  	padding-right: 5%;
  	padding-left: 5%;
  	margin-top: 2em;
@@ -122,4 +121,25 @@ body
   text-align: center;
   font-size: 16px;
   cursor: pointer;
+}
+
+.payment-serv
+{
+
+	padding: 2% 5% 2% 5%;
+	margin-top: 0.5em;
+
+
+}
+
+.nav-ul-pay
+{
+	text-align: center;
+}
+
+.nav-li-pay
+{
+	display: inline-block;
+	margin-right: 1em;
+	font-size: 2em;
 }
