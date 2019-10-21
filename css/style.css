@@ -144,10 +144,3 @@ body
 	font-size: 2em;
 }
 
-
-@media only screen and (max-width:800px) {
-  /* For tablets: */
- body {
-    width: 80%;
-    padding: 0;
-  }
