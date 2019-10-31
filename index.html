@@ -13,8 +13,11 @@
 	<script src="https://kit.fontawesome.com/4f54d194e9.js" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="scripts/menu.js"></script>
 	<script type="text/javascript" src="scripts/s1.js"></script>
+	<script type="text/javascript" src="scripts/auth.js"></script>
 </head>
 <body onload="myFunction()" class="blur">
+
+	
 	<div id="loader"></div>
  <div class="fixed">
  <!-- Top Soc Nav Header -->
@@ -24,7 +27,7 @@
 					<li class="nav-li-soc left"><a class="navbar-a-soc" href="" target="_blank" title="Facebook გვერდი"><i class="fab fa-facebook-square"></i></a></li>
 					<li class="nav-li-soc left"><a class="navbar-a-soc" href="" target="_blank" title="Instagram გვერდი"><i class="fab fa-instagram"></i></a></li>
 					<li class="nav-li-soc left"><a class="navbar-a-soc" href="tel:591928686" title="ტელეფონი"><i class="fas fa-phone-square"></i></a></li>
-					<li class="nav-li-soc right"><a class="navbar-a-soc" href="" title="შესვლა / რეგისტრაცია"><i class="fas fa-user-plus"></i></a></li>
+					<li class="nav-li-soc right"><a class="navbar-a-soc" id="myBtn"  title="შესვლა / რეგისტრაცია"><i class="fas fa-user-plus"></i></a></li>
 					<li class="nav-li-soc right"><a class="navbar-a-soc lang" href="" title="ენა">🇬🇪</a></li>
 					<li class="nav-li-soc right"><a class="navbar-a-soc" href="" title="DayMode"><i class="fas fa-adjust"></i></a></li>
 				</ul>
@@ -53,32 +56,32 @@
 <div id="myDiv" class="animate-bottom">
  <div class="flex-container">
   <div class="basic grow">
-  	 <a href="">
+  	 <a href="#">
   	 	<p class="col"> Start პაკეტი </p>
-  	 	<p class="col"> სიჩქარე 20 მბ/წმ </p>
-  	 	<button class="button">20 ₾</button>
-  	 </a>
+  	 	<p class="col"> სიჩქარე 20 მბ/წმ </p>  	 </a>
+  	 	<button class="button" id="myBtn">20 ₾</button>
+
   </div>
   <div class="medium grow">
-  	<a href="">
+  	<a href="#">
   		<p class="col"> Medium პაკეტი </p>
-  		<p class="col"> სიჩქარე 40 მბ/წმ </p>
-  	 	<button class="button">30 ₾</button>
-  	</a>
+  		<p class="col"> სიჩქარე 40 მბ/წმ </p>  	</a>
+  	 	<button class="button" id="myBtn">30 ₾</button>
+
   </div>
   <div class="premium grow">
-  	<a href="">
+  	<a href="#">
   		<p class="col"> Premium პაკეტი </p>
-  		  	<p class="col"> სიჩქარე 50 მბ/წმ </p>
-  	 	<button class="button">40 ₾</button>
-  	</a>
+  		  	<p class="col"> სიჩქარე 50 მბ/წმ </p>  	</a>
+  	 	<button class="button" id="myBtn">40 ₾</button>
+
   </div> 
   <div class="plus grow">
-  	<a href=""
-  	><p class="col"> infiNET+ პაკეტი </p>
-  	  	<p class="col"> სიჩქარე 100 მბ/წმ </p>
-  	 	<button class="button">60 ₾</button>
-  </a>
+  	<a href="#">
+  	<p class="col"> infiNET+ პაკეტი </p>
+  	  	<p class="col"> სიჩქარე 100 მბ/წმ </p>  </a>
+  	 	<button class="button" id="myBtn">60 ₾</button>
+
   </div>
 </div>
 
@@ -92,5 +95,67 @@
 		</ul>
 	</nav>
 </footer></div>
+
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+  	<span class="close">&times;</span>
+    <form action="/action_page.php">
+  <div class="container">
+    <p class="reg">რეგისტრაცია</p>
+    
+    <hr>
+
+    <label for="email"><p class="reg">ელ-ფოსტა</p></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><p class="reg">პაროლი</p></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <label for="psw-repeat"><p class="reg">გაიმეორეთ პაროლი</p></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+    <hr>
+
+    <button type="submit" class="registerbtn reg"><p>რეგისტრაცია</p></button>
+  </div>
+  
+  <div class="container signin">
+    <p class="reg">უკვე გაქვთ ანგარიში ? მაშინ გაიარეთ <a href="#" class="auth">ავტორიზაცია</a></p>
+  </div>
+</form>
+  </div>
+
+</div>
+
+
+
+<script type="text/javascript">
+	// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
 </body>
 </html>
