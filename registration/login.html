@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>ავტორიზაცია</title>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../css/hover.css">
+    <link rel="stylesheet" type="text/css" href="../css/preloader.css">
+    <link rel="stylesheet" type="text/css" href="../css/auth.css">
+    <link rel="icon" type="image/png" href="../img/logo_2.png" />
+    <script src="https://kit.fontawesome.com/4f54d194e9.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../scripts/menu.js"></script>
+    <script type="text/javascript" src="../scripts/s1.js"></script>
+    <script type="text/javascript" src="../scripts/auth.js"></script>
+	</head>
+   <body onload="myFunction()" class="blur">
+ <div class="fixed">
+ <!-- Top Soc Nav Header -->
+    <header class="soc-header">
+            <nav class="nav-soc">
+                <ul class="nav-ul-soc">
+                    <li class="nav-li-soc left"><a class="navbar-a-soc" href="" target="_blank" title="Facebook გვერდი"><i class="fab fa-facebook-square"></i></a></li>
+                    <li class="nav-li-soc left"><a class="navbar-a-soc" href="" target="_blank" title="Instagram გვერდი"><i class="fab fa-instagram"></i></a></li>
+                    <li class="nav-li-soc left"><a class="navbar-a-soc" href="tel:591928686" title="ტელეფონი"><i class="fas fa-phone-square"></i></a></li>
+                    <li class="nav-li-soc right"><a href="../index.html" class="navbar-a-soc" id="myBtn"  title="მთავარ გვერდზე გადასვლა"><i class="fas fa-home"></i></a></li>
+                    <li class="nav-li-soc right"><a class="navbar-a-soc lang" href="" title="ენა">🇬🇪</a></li>
+                    <li class="nav-li-soc right"><a class="navbar-a-soc" href="" title="DayMode"><i class="fas fa-adjust"></i></a></li>
+                </ul>
+            <div class="clear"></div>
+        </nav>
+    </header>
+		<form name="login">
+			<div class="input-group">
+                <label for="email"><p class="reg">ელ-ფოსტა</p></label>
+                <input type="text" name="email" onkeydown="validate(this.value);" placeholder="შეიყვანეთ მეილი">
+            </div>
+			<div class="input-group">
+                <label><p class="reg">პაროლი</p></label>
+                <input type="password" id="psw" name="psw"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="შეიყვანეთ პაროლი"/>
+            </div>
+			<div class="input-group">
+				<button type="submit" class="loginbtn" ><p class="reg">ავტორიზაცია</p></button>
+			</div>
+			<br>
+			<p class="reg">
+				არ გაქვთ ანგარიში? <a href="register.html">რეგისტრაცია</a>
+			</p>
+		</form>
+	</body>
+</html>

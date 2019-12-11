@@ -9,6 +9,8 @@
 	<link rel="stylesheet" type="text/css" href="css/fonts.css">
 	<link rel="stylesheet" type="text/css" href="css/hover.css">
 	<link rel="stylesheet" type="text/css" href="css/preloader.css">
+	<link rel="stylesheet" type="text/css" href="css/auth.css">
+	<link rel="stylesheet" type="text/css" href="css/slider.css">
 	<link rel="icon" type="image/png" href="img/logo_2.png" />
 	<script src="https://kit.fontawesome.com/4f54d194e9.js" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="scripts/menu.js"></script>
@@ -27,7 +29,7 @@
 					<li class="nav-li-soc left"><a class="navbar-a-soc" href="" target="_blank" title="Facebook გვერდი"><i class="fab fa-facebook-square"></i></a></li>
 					<li class="nav-li-soc left"><a class="navbar-a-soc" href="" target="_blank" title="Instagram გვერდი"><i class="fab fa-instagram"></i></a></li>
 					<li class="nav-li-soc left"><a class="navbar-a-soc" href="tel:591928686" title="ტელეფონი"><i class="fas fa-phone-square"></i></a></li>
-					<li class="nav-li-soc right"><a class="navbar-a-soc" id="myBtn"  title="შესვლა / რეგისტრაცია"><i class="fas fa-user-plus"></i></a></li>
+					<li class="nav-li-soc right"><a href="registration/register.html" class="navbar-a-soc" id="myBtn"  title="შესვლა / რეგისტრაცია"><i class="fas fa-user-plus"></i></a></li>
 					<li class="nav-li-soc right"><a class="navbar-a-soc lang" href="" title="ენა">🇬🇪</a></li>
 					<li class="nav-li-soc right"><a class="navbar-a-soc" href="" title="DayMode"><i class="fas fa-adjust"></i></a></li>
 				</ul>
@@ -52,6 +54,38 @@
 		</nav>
 	</header>
 </div>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="https://www.iottechnews.com/media/img/news/abstract-network-background-vector-id1078061882.jpg.800x600_q96.png" style="width:100%">
+  <div class="text"><p class="reg">infiNET და Smartlux გაერთიანდნენ</p></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="https://www.jpl.nasa.gov/spaceimages/images/wallpaper/PIA19964-800x600.jpg" style="width:100%">
+  <div class="text"><p class="reg">შესაძლებელია თუ არა მთვარესთან ლაივ კავშირი ?</p></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="https://i2.wp.com/boingboing.net/wp-content/uploads/2019/11/ios.jpg?fit=800%2C600&ssl=1" style="width:100%">
+  <div class="text"><p class="reg">საახალწლო საჩუქრები infiNETისაგან. არ გამოტოვოთ</p></div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+
+
+
 <!-- Section -->
 <div id="myDiv" class="animate-bottom">
  <div class="flex-container">
@@ -96,41 +130,36 @@
 	</nav>
 </footer></div>
 
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-  	<span class="close">&times;</span>
-    <form action="/action_page.php">
-  <div class="container">
-    <p class="reg">რეგისტრაცია</p>
-    
-    <hr>
-
-    <label for="email"><p class="reg">ელ-ფოსტა</p></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
-
-    <label for="psw"><p class="reg">პაროლი</p></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-
-    <label for="psw-repeat"><p class="reg">გაიმეორეთ პაროლი</p></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-    <hr>
-
-    <button type="submit" class="registerbtn reg"><p>რეგისტრაცია</p></button>
-  </div>
-  
-  <div class="container signin">
-    <p class="reg">უკვე გაქვთ ანგარიში ? მაშინ გაიარეთ <a href="#" class="auth">ავტორიზაცია</a></p>
-  </div>
-</form>
-  </div>
-
-</div>
 
 
 
 <script type="text/javascript">
+	var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
 	// Get the modal
 var modal = document.getElementById("myModal");
 

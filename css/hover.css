@@ -34,6 +34,11 @@
 	color: #2ed573;
 }
 
+.fa-home:hover
+{
+	color: #f39c12;
+}
+
 .basic:hover
 {
 	background-color: #2980b9;

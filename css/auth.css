@@ -1,38 +1,100 @@
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+.form-control
+{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #2f3640;
+    color: white;
 }
 
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
+form, .content {
+width: 30%;
+height: auto;
+margin:1px auto;
+padding: 50px;
 }
 
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+.input-group {
+margin: 10px 0px 10px 0px;
+}
+.input-group label {
+display: block;
+text-align: center;
+margin: 1px;
+}
+p{
+text-align: center;
 }
 
-.close:hover,
-.close:focus {
-  color: #000;
+.regdate{
+display: block;
+text-align: center;
+margin: 10px 0px 10px 0px;
+background-color: #353b48;
+color:white;
+
+}
+.checklbl{
+display: block;
+text-align: center;
+font-size:30px;
+
+}
+
+}
+}
+*/
+.container {
+background: rgba(255,255,255,0.3);
+padding: 20px;
+}
+
+#message {
+display:none;
+color: #000;
+position: relative;
+padding: 20px;
+margin-top: 10px;
+}
+#message p {
+padding: 10px 35px;
+font-size: 18px;
+}
+
+.valid {
+color: #6ab04c;
+}
+.valid:before {
+position: relative;
+left: -35px;
+content: "✔";
+}
+
+.invalid {
+color: #eb4d4b;
+}
+.invalid:before {
+position: relative;
+left: -35px;
+content: "✖";
+}
+
+
+a
+{
   text-decoration: none;
-  cursor: pointer;
+  color: #eb4d4b;
+}
+
+.clogo
+{
+  width: 2%;
+}
+
+.center-div
+{
+margin: 10px 0px 10px 0px;
 }
