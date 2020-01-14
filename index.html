@@ -16,6 +16,8 @@
 	<script type="text/javascript" src="scripts/menu.js"></script>
 	<script type="text/javascript" src="scripts/s1.js"></script>
 	<script type="text/javascript" src="scripts/auth.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="scripts/main_lang.js"></script>
 </head>
 <body onload="myFunction()" class="blur">
 
@@ -30,7 +32,13 @@
 					<li class="nav-li-soc left"><a class="navbar-a-soc" href="" target="_blank" title="Instagram გვერდი"><i class="fab fa-instagram"></i></a></li>
 					<li class="nav-li-soc left"><a class="navbar-a-soc" href="tel:591928686" title="ტელეფონი"><i class="fas fa-phone-square"></i></a></li>
 					<li class="nav-li-soc right"><a href="registration/register.html" class="navbar-a-soc" id="myBtn"  title="შესვლა / რეგისტრაცია"><i class="fas fa-user-plus"></i></a></li>
-					<li class="nav-li-soc right"><a class="navbar-a-soc lang" href="" title="ენა">🇬🇪</a></li>
+					<li class="nav-li-soc right"><div class="dropdown">
+ 							 <button class="dropbtn  lang" key="language">ენა</button>
+ 								 <div class="dropdown-content">
+ 									 <button id="en" class="translate">English</button>
+  										<button id="ge" class="translate">Georgian</button>
+ 									 </div>
+						</div></li>
 					<li class="nav-li-soc right"><a class="navbar-a-soc" href="" title="DayMode"><i class="fas fa-adjust"></i></a></li>
 				</ul>
 			<div class="clear"></div>
@@ -43,12 +51,12 @@
 			<nav class="nav-menu">
 				<ul class="nav-ul-menu">
 					<a href="#"><img class="logo-menu" src='img/logo2.svg' onmouseover="this.src='img/logo.svg';" onmouseout="this.src='img/logo2.svg';" /></a>
-					<li class="nav-li-menu"><a class="navbar-a-menu" href="" title="">infiNET+</a></li>
-					<li class="nav-li-menu"><a class="navbar-a-menu" href="" title="">ინტერნეტი</a></li>
-					<li class="nav-li-menu"><a class="navbar-a-menu" href="" title="ტელევიზია">ინფინი TV</a></li>
-					<li class="nav-li-menu"><a class="navbar-a-menu" href="" title="">დომენი</a></li>
-					<li class="nav-li-menu"><a class="navbar-a-menu" href="" title="">ჰოსტინგი</a></li>
-					<li class="nav-li-menu"><a class="navbar-a-menu" href="" title="">კონტაქტი</a></li>
+					<li class="nav-li-menu"><a class="navbar-a-menu lang" href="" title="" key="infiNET+">infiNET+</a></li>
+					<li class="nav-li-menu"><a class="navbar-a-menu lang" href="" title="" key="ინტერნეტი">ინტერნეტი</a></li>
+					<li class="nav-li-menu"><a class="navbar-a-menu lang" href="" title="" key="ინფინი TV">ინფინი TV</a></li>
+					<li class="nav-li-menu"><a class="navbar-a-menu lang" href="" title="" key="დომენი">დომენი</a></li>
+					<li class="nav-li-menu"><a class="navbar-a-menu lang" href="" title="" key="ჰოსტინგი">ჰოსტინგი</a></li>
+					<li class="nav-li-menu"><a class="navbar-a-menu lang" href="" title="" key="კონტაქტი">კონტაქტი</a></li>
 				</ul>
 			<div class="clear"></div>
 		</nav>
@@ -58,17 +66,17 @@
 
 <div class="mySlides fade">
   <img src="https://www.iottechnews.com/media/img/news/abstract-network-background-vector-id1078061882.jpg.800x600_q96.png" style="width:100%">
-  <div class="text"><p class="reg">infiNET და Smartlux გაერთიანდნენ</p></div>
+  <div class="text"><p class="reg  lang" key="slider1">infiNET და Smartlux გაერთიანდნენ</p></div>
 </div>
 
 <div class="mySlides fade">
   <img src="https://www.jpl.nasa.gov/spaceimages/images/wallpaper/PIA19964-800x600.jpg" style="width:100%">
-  <div class="text"><p class="reg">შესაძლებელია თუ არა მთვარესთან ლაივ კავშირი ?</p></div>
+  <div class="text"><p class="reg  lang" key="slider2">შესაძლებელია თუ არა მთვარესთან ლაივ კავშირი ?</p></div>
 </div>
 
 <div class="mySlides fade">
   <img src="https://i2.wp.com/boingboing.net/wp-content/uploads/2019/11/ios.jpg?fit=800%2C600&ssl=1" style="width:100%">
-  <div class="text"><p class="reg">საახალწლო საჩუქრები infiNETისაგან. არ გამოტოვოთ</p></div>
+  <div class="text"><p class="reg  lang" key="slider3">საახალწლო საჩუქრები infiNETისაგან. არ გამოტოვოთ</p></div>
 </div>
 
 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -91,32 +99,32 @@
  <div class="flex-container">
   <div class="basic grow">
   	 <a href="#">
-  	 	<p class="col"> Start პაკეტი </p>
-  	 	<p class="col"> სიჩქარე 20 მბ/წმ </p>  	 </a>
+  	 	<p class="col  lang" key="start"> Start პაკეტი </p>
+  	 	<p class="col  lang" key="start_speed"> სიჩქარე 20 მბ/წმ </p>  	 </a>
   	 	<button class="button" id="myBtn">20 ₾</button>
 
   </div>
   <div class="medium grow">
   	<a href="#">
-  		<p class="col"> Medium პაკეტი </p>
-  		<p class="col"> სიჩქარე 40 მბ/წმ </p>  	</a>
+  		<p class="col  lang" key="medium"> Medium პაკეტი </p>
+  		<p class="col  lang" key="medium_speed"> სიჩქარე 40 მბ/წმ </p>  	</a>
   	 	<button class="button" id="myBtn">30 ₾</button>
 
   </div>
   <div class="premium grow">
   	<a href="#">
-  		<p class="col"> Premium პაკეტი </p>
-  		  	<p class="col"> სიჩქარე 50 მბ/წმ </p>  	</a>
+  		<p class="col  lang" key="pro"> Premium პაკეტი </p>
+  		  	<p class="col  lang" key="pro_speed"> სიჩქარე 50 მბ/წმ </p>  	</a>
   	 	<button class="button" id="myBtn">40 ₾</button>
 
   </div> 
-  <div class="plus grow">
+  <a href=/registration/register.html> <div class="plus grow">
   	<a href="#">
-  	<p class="col"> infiNET+ პაკეტი </p>
-  	  	<p class="col"> სიჩქარე 100 მბ/წმ </p>  </a>
+  	<p class="col  lang" key="full"> infiNET+ პაკეტი </p>
+  	  	<p class="col  lang" key="full_speed"> სიჩქარე 100 მბ/წმ </p>  </a>
   	 	<button class="button" id="myBtn">60 ₾</button>
 
-  </div>
+  </div> </a>
 </div>
 
 <footer class="payment-serv">
