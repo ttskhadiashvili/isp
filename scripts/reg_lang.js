@@ -12,10 +12,9 @@ var arrLang = {
 				'number' : '>ციფრი',
 				'8sym' : 'მინიმუმ <b>8 სიმბოლო',
 				'repeat' : 'დაადასტურეთ პაროლი',
-				'reg' : 'რეგისტრაცია',
 				'already' : 'გაქვთ უკვე ანგარიში? ',
+				'regdate' : 'რეგისტრაციის თარიღი',
 				'auth' : 'ავტორიზაცია',
-				'regdate' : 'რეგისტრაციის თარიღი'
 
 			},
 			'en' : {
@@ -31,10 +30,9 @@ var arrLang = {
 				'number' : 'number',
 				'8sym' : 'minimum 8 symbol',
 				'repeat' : 'Repeat Password',
-				'reg' : 'Registration',
 				'already' : 'Already have an account ?',
-				'auth' : ' Authorisation',
-				'regdate' : 'Registration Date'
+				'regdate' : 'Registration Date',
+				'auth' : 'Log in'
 			}
 		};
 $(function() {
