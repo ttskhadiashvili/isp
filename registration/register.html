@@ -15,6 +15,8 @@
     <script type="text/javascript" src="../scripts/menu.js"></script>
     <script type="text/javascript" src="../scripts/s1.js"></script>
     <script type="text/javascript" src="../scripts/auth.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../scripts/re_lang.js"></script>
     </head>
    <body onload="myFunction()" class="blur">
  <div class="fixed">
@@ -25,8 +27,14 @@
                     <li class="nav-li-soc left"><a class="navbar-a-soc" href="" target="_blank" title="Facebook გვერდი"><i class="fab fa-facebook-square"></i></a></li>
                     <li class="nav-li-soc left"><a class="navbar-a-soc" href="" target="_blank" title="Instagram გვერდი"><i class="fab fa-instagram"></i></a></li>
                     <li class="nav-li-soc left"><a class="navbar-a-soc" href="tel:591928686" title="ტელეფონი"><i class="fas fa-phone-square"></i></a></li>
-                    <li class="nav-li-soc right"><a href="../index.html" class="navbar-a-soc" id="myBtn"  title="მთავარ გვერდზე გადასვლა"><i class="fas fa-home"></i></a></li>
-                    <li class="nav-li-soc right"><a class="navbar-a-soc lang" href="" title="ენა">🇬🇪</a></li>
+                    <li class="nav-li-soc right"><a href="registration/register.html" class="navbar-a-soc" id="myBtn"  title="შესვლა / რეგისტრაცია"><i class="fas fa-user-plus"></i></a></li>
+                    <li class="nav-li-soc right"><div class="dropdown">
+                             <button class="dropbtn  lang" key="language">ენა</button>
+                                 <div class="dropdown-content">
+                                     <button id="en" class="translate">English</button>
+                                        <button id="ge" class="translate">Georgian</button>
+                                     </div>
+                        </div></li>
                     <li class="nav-li-soc right"><a class="navbar-a-soc" href="" title="DayMode"><i class="fas fa-adjust"></i></a></li>
                 </ul>
             <div class="clear"></div>
@@ -34,20 +42,20 @@
     </header>
         <form name="registration" action="/action_page.php">
             <div class="input-group">
-                <label for="uname"><p class="reg">სრული სახელი</p></label>
-                <input type="text" placeholder="შეიყვანეთ სახელი" name="uname" >
+                <label for="uname"><p class="reg  lang" key="name">სრული სახელი</p></label>
+                <input type="text"  name="uname">
             </div>
             
             <div class="input-group">
-                <label for="email"><p class="reg">ელ-ფოსტა</p></label>
-                <input type="text" name="email" onkeydown="validate(this.value);" placeholder="შეიყვანეთ მეილი">
+                <label for="email"><p class="reg  lang" key="mail">ელ-ფოსტა</p></label>
+                <input type="text" name="email" onkeydown="validate(this.value);">
             </div>
             <div class="checklbl" id="checklbl">
                 <p id="chkemail" class="confirm-message"></p>
             </div>
 
             <div class="input-group" name="country">
-                <label for="country"><p class="reg">ქვეყანა</p></label>
+                <label for="country"><p class="reg lang" key="country">ქვეყანა</p></label>
                 <select id="country"  class="form-control">
                     <option value="Afghanistan">Afghanistan</option>
                     <option value="Åland Islands">Åland Islands</option>
@@ -296,27 +304,27 @@
                 </select>
             </div>
             <div class="input-group">
-                <label for="city"><p class="reg">ქალაქი</p></label>
-                    <input type="text" placeholder="შეიყვანეთ ქალაქი" name="city" >
+                <label for="city"><p class="reg lang" key="city">ქალაქი</p></label>
+                    <input type="text"  name="city" >
             </div>
             <div class="input-group">
-                <label for="tphone"><p class="reg">ტელ. ნომერი</p></label>
-                    <input type="text" placeholder="შეიყვანეთ საკონტაქტო ნომერი" name="tphone" >
+                <label for="tphone"><p class="reg lang" key="tel">ტელ. ნომერი</p></label>
+                    <input type="text"  name="tphone" >
             </div>
             <div class="input-group">
-                <label><p class="reg">პაროლი</p></label>
-                <input type="password" id="psw" name="psw"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="პაროლი უნდა შეიცავდეს ერთ დიდ სიმბოლოს , ერთ ციფრს და პატარა სიმბოლოს, ჯამში 8 ან მეტ სიმბოლოს"  onkeyup="checkPass();" placeholder="შეიყვანეთ პაროლი"/>
+                <label><p class="reg lang" key="pass" >პაროლი</p></label>
+                <input key="psw" type="password" id="psw" name="psw"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="პაროლი უნდა შეიცავდეს ერთ დიდ სიმბოლოს , ერთ ციფრს და პატარა სიმბოლოს, ჯამში 8 ან მეტ სიმბოლოს"  onkeyup="checkPass();"/>
             </div>
             <div id="message" class="input-group">
-                <p id="letter" class="invalid reg"><b>პატარა</b> სიმბოლო</p>
-                <p id="capital" class="invalid reg"><b>დიდი</b> სიმბოლო</p>
-                <p id="number" class="invalid reg"><b>ციფრი</b></p>
-                <p id="length" class="invalid reg">მინიმუმ <b>8 სიმბოლო</b></p>
+                <p id="letter" class="invalid reg  lang" key="smsym"><b>პატარა</b> სიმბოლო</p>
+                <p id="capital" class="invalid reg lang" key="bgsym"><b>დიდი</b> სიმბოლო</p>
+                <p id="number" class="invalid reg lang" key="number"><b>ციფრი</b></p>
+                <p id="length" class="invalid reg lang" key="8sym">მინიმუმ <b>8 სიმბოლო</b></p>
             </div>
             <script src="main.js"> </script>
             <div class="input-group">
-                <label><p class="reg">დაადასტურეთ პაროლი</p></label>
-                <input type="password" id="psw2"  onkeyup="checkPass();" placeholder="გაიმეორეთ პაროლი" />
+                <label><p class="reg lang" key="repeat">დაადასტურეთ პაროლი</p></label>
+                <input type="password"  onkeyup="checkPass();"/>
             </div>
             <div class="checklbl" id="checklbl">
                 <p id="check" class="confirm-message"></p>
@@ -325,16 +333,16 @@
             <hr>
 
             <div class="input-group">
-                <button type="submit" class="registerbtn reg" name="reg_user" ><p>რეგისტრაცია</p></button>
+                <button type="submit" class="registerbtn reg" name="reg_user" ><p key="reg">რეგისტრაცია</p></button>
             </div>
-            <p>
-                გაქვთ უკვე ანგარიში? <a href="login.html">ავტორიზაცია</a>
+            <p class=" lang" key="already">
+                გაქვთ უკვე ანგარიში? <a href="login.html" class=" lang" key="auth">ავტორიზაცია</a>
             </p>
 
             <br>
             <!--regdate -->
             <div class="regdate">
-                <label><p class="reg">რეგისტრაციის თარიღი</p></label>
+                <label><p class="reg lang" key="regdate">რეგისტრაციის თარიღი</p></label>
 
                 <p id="date"></p>
                 <!--    <script src="main.js"></script> -->
